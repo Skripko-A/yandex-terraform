@@ -6,8 +6,7 @@ users:
     shell: /bin/bash
     sudo: ['ALL=(ALL) NOPASSWD:ALL']
     ssh-authorized-keys:
-      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILzOyISDA2OdBiuD59OAxx/YBSXrVKxwCJygwtoDI932 a-skripko@askripko-lp
-      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPmOW2eC7gxJ90nxlJdPnch9k/jjlMnO7ED1chhHRua6 fair@Tikhons-MacBook-Pro.local
+      - добавьте публичный ключ
 
 # Настройка SSH-сервера
 write_files:
