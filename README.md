@@ -21,10 +21,12 @@
    terraform version
    ```
 3. В файле 'default.autovars' заполните ваши данные для атворизации в Yndex Cloud
-4. Инициация terraform, проврка плана, создание и уничтожение ресурсы
+4. Добавьте свой публичный ключ ssh для подключения к новой ВМ в файл meta.yaml
+5. Инициация terraform, проврка плана, создание и уничтожение ресурсы
    ```bash
    terraform init
    terraform apply
+   ssh test@ipaddress
    terraform destroy
    ```
 ## Структура
