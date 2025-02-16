@@ -1,0 +1,24 @@
+#cloud-config
+# настройка пользователей
+users:
+  - name: test
+    groups: [sudo]
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh-authorized-keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILzOyISDA2OdBiuD59OAxx/YBSXrVKxwCJygwtoDI932 a-skripko@askripko-lp
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPmOW2eC7gxJ90nxlJdPnch9k/jjlMnO7ED1chhHRua6 fair@Tikhons-MacBook-Pro.local
+
+# Настройка SSH-сервера
+write_files:
+  - path: /etc/ssh/sshd_config.d/01-cloudinit.conf
+    content: |
+      PasswordAuthentication no
+      ChallengeResponseAuthentication no
+      UsePAM yes
+      PubkeyAuthentication yes
+      AuthorizedKeysFile .ssh/authorized_keys
+
+# Перезапуск SSH-сервера после применения настроек
+runcmd:
+  - systemctl restart sshd
