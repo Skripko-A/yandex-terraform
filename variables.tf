@@ -9,7 +9,7 @@ variable "cloud_id" {
   type        = string
   }
 
-variable "folder_id {
+variable "folder_id" {
   description = "Yandex Cloud folder ID"
   type        = string
   }
