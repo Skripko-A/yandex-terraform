@@ -28,14 +28,13 @@
    terraform destroy
    ```
 ## Структура
-yandex-terraform/  
-├── main.tf              # Основной конфигурационный файл  
-├── variables.tf          # Файл с определением переменных  
-├── outputs.tf            # Файл с выводимыми значениями  
-├── providers.tf          # Конфигурация провайдера Yandex  
-├── secrets.auto.tfvars   # Файл с секретными данными (не добавлять в Git)  
-├── README.md             # Этот файл  
-└── .gitignore            # Исключения для Git  
+yandex-terraform/
+├── create-vm.tf # Создаваемые ресурсы  
+├── providers.tf # Подключение к Yandex CLI  
+├── variables.tf # Файл с определением переменных
+├── secrets.auto.tfvars # Файл с секретными данными (не добавлять в Git)
+├── README.md # Этот файл
+└── .gitignore # Исключения для Git
 
 ## Лицензия
 Этот проект распространяется под лицензией MIT . См. файл LICENSE для получения дополнительной информации.
