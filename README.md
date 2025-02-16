@@ -28,7 +28,7 @@
    terraform destroy
    ```
 ## Структура
-yandex-terraform/
+yandex-terraform/  
 ├── create-vm.tf # Создаваемые ресурсы  
 ├── providers.tf # Подключение к Yandex CLI  
 ├── variables.tf # Файл с определением переменных  
